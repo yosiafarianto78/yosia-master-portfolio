@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yosia's Online House</title>
+    <style>
+        /* Core styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #2c3e50;
+            padding: 1rem;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        /* Sections */
+        section {
+            min-height: 100vh;
+            padding: 6rem 2rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+
+        /* Hero Section */
+        #home {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Profile Section */
+        .profile-container {
+            display: flex;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .profile-image {
+            flex: 1;
+        }
+
+        .profile-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .profile-text {
+            flex: 2;
+        }
+
+        /* Experience Section */
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: #3498db;
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+            width: calc(50% - 2rem);
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .timeline-item:nth-child(odd) {
+            margin-left: auto;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 1rem;
+        }
+
+        /* Hobbies Section */
+        .hobbies-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hobby-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .hobby-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .hobby-info {
+            padding: 1rem;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            padding: 0.8rem;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #2980b9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-container {
+                flex-direction: column;
+            }
+
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-item {
+                width: calc(100% - 2rem);
+                margin-left: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="hero-content">
+            <h1>Will be answered one of your important questions in this life about</h1>
+            <h1>"Who's Yosia?"</h1>
+            <p> IT Specialist | Sports Enthusiast | Multiplayer Games Lover</p>
+        </div>
+    </section>
+
+    <section id="profile">
+        <h2 class="section-title">Who is Yosia?</h2>
+        <div class="profile-container">
+            <div class="profile-image">
+                <img src="/api/placeholder/400/400" alt="Yosia's Profile">
+            </div>
+            <div class="profile-text">
+                <p> </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Position Title</h3>
+                <p>BCA Life | 2020 - Present</p>
+                <p>Description of your role and achievements</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Previous Position</h3>
+                <p>BCA Life | 2018 - 2020</p>
+                <p>Description of your role and achievements</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="/api/placeholder/400/200" alt="Project 1" class="project-image">
+                <div class="project-info">
+                    <h3>Project Name</h3>
+                    <p>Description of the project and your role in it.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="/api/placeholder/400/200" alt="Project 2" class="project-image">
+                <div class="project-info">
+                    <h3>Project Name</h3>
+                    <p>Description of the project and your role in it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hobbies">
+        <h2 class="section-title">Hobbies</h2>
+        <div class="hobbies-container">
+            <div class="hobby-card">
+                <img src="/api/placeholder/400/200" alt="Table Tennis" class="hobby-image">
+                <div class="hobby-info">
+                    <h3>Table Tennis</h3>
+                    <p>My experience and achievements in table tennis.</p>
+                </div>
+            </div>
+            <div class="hobby-card">
+                <img src="/api/placeholder/400/200" alt="Badminton" class="hobby-image">
+                <div class="hobby-info">
+                    <h3>Badminton</h3>
+                    <p>My journey and passion for badminton.</p>
+                </div>
+            </div>
+            <div class="hobby-card">
+                <img src="/api/placeholder/400/200" alt="Movies" class="hobby-image">
+                <div class="hobby-info">
+                    <h3>Movie Watching</h3>
+                    <p>My favorite genres and memorable films.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Previous HTML remains the same until contact section -->
+
+<section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact-container">
+        <div class="contact-methods">
+            <style>
+                .contact-methods {
+                    text-align: center;
+                    max-width: 600px;
+                    margin: 0 auto;
+                }
+                
+                .contact-links {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 2rem;
+                    margin: 2rem 0;
+                }
+                
+                .contact-link {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: #333;
+                    padding: 1rem;
+                    border-radius: 8px;
+                    background: white;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                    transition: transform 0.3s;
+                }
+                
+                .contact-link:hover {
+                    transform: translateY(-5px);
+                }
+                
+                .contact-icon {
+                    width: 40px;
+                    height: 40px;
+                    background: #3498db;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 1rem;
+                    color: white;
+                    font-size: 1.2em;
+                }
+                
+                .contact-info {
+                    text-align: left;
+                }
+                
+                .contact-info span {
+                    display: block;
+                }
+                
+                .contact-info .label {
+                    font-size: 0.9em;
+                    color: #666;
+                }
+                
+                @media (max-width: 600px) {
+                    .contact-links {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
+            
+            <h3>Let's Connect!</h3>
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com" class="contact-link">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-info">
+                        <span class="label">Email</span>
+                        <span>your.email@example.com</span>
+                    </div>
+                </a>
+
+                
+                <a href="https://wa.me/087778315785" class="contact-link">
+                    <div class="contact-icon">📱</div>
+                    <div class="contact-info">
+                        <span class="label">WhatsApp</span>
+                        <span>+62 xxx-xxxx-xxxx</span>
+                    </div>
+                </a>
+                
+                <a href="https://linkedin.com/in/yosiafarianto" class="contact-link">
+                    <div class="contact-icon">in</div>
+                    <div class="contact-info">
+                        <span class="label">LinkedIn</span>
+                        <span>linkedin.com/in/yourusername</span>
+                    </div>
+                </a>
+                
+                <a href="https://instagram.com/yourusername" class="contact-link">
+                    <div class="contact-icon">📷</div>
+                    <div class="contact-info">
+                        <span class="label">Instagram</span>
+                        <span>@yourusername</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Rest of the HTML remains the same -->
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
