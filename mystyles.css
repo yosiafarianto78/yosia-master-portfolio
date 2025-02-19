@@ -950,13 +950,13 @@
     }
 
     .hobby-card {
-        height: 300px; /* Increased height for mobile */
+        height: 300px; 
         display: flex;
         flex-direction: column;
     }
 
     .hobby-image {
-        height: 100%; /* Make image take full height of card */
+        height: 100%; 
         object-fit: cover;
     }
 
