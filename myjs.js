@@ -119,37 +119,37 @@ document.addEventListener("DOMContentLoaded", function () {
 /* HOBBY MODAL FUNCTIONALITY */
 document.addEventListener('DOMContentLoaded', () => {
   const hobbyPhotosMap = {
-    "Sports": [
-      "images/Sports/bultang_1.jpg",
-      "images/Sports/bultang_2.jpg",
-      "images/Sports/bultang_3.jpg",
-      "images/Sports/bultang_4.jpg",
-      "images/Sports/bultang_5.jpg",
-      "images/Sports/bultang_6.jpg",
-      "images/Sports/bultang_7.jpg"
-    ],
-    "Film": [
-      "https://boredanddangerousblog.wordpress.com/wp-content/uploads/2015/09/beautiful-mind.jpg",
-      "https://thumbor.prod.vidiocdn.com/_E3qsDq5_pi8I6yKh4mOOBMyySc=/1280x720/filters:quality(70)/vidio-web-prod-video/uploads/video/image/8341905/sinopsis-the-chronicles-of-narnia-the-lion-the-witch-and-the-wardrobe-2005-rekomendasi-film-fantasi-petualangan-amerika-b17bbe.jpg",
-      "https://bisnismuda.id/assets/content/2023040304414200000020230331125940000000Godfather.jpg",
-      "https://thecrazyandlazy.wordpress.com/wp-content/uploads/2017/03/goblin.png",
-      "https://cdn.k-ennews.com/news/photo/202501/6881_18399_3812.jpg",
-      "https://asianwiki.com/images/c/c8/Itaewon_Class-mp1.jpg",
-      "https://www.viu.com/ott/id/articles/wp-content/uploads/2023/07/nonton-streaming-download-fireworks-of-my-heart-sub-indo-viu-slide-banner.jpg",
-      "https://miro.medium.com/v2/resize:fit:1024/1*XSPebIkn0Z_QGrHsUldB-Q.jpeg",
-      "https://i.ebayimg.com/images/g/jxYAAOSwbgxmTB6Y/s-l1200.jpg",
-      "https://www.thenewshouse.com/wp-content/uploads/Untitled-design-4-1024x683.png",
-      "https://www.bubbleblabber.com/wp-content/uploads/2014/05/Naruto-Shippuden-Konoha-Wallpapers-HD.jpg",
-      "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/243/2024/08/09/uiktyu-1182121447.jpg"
-    ],
-    "Games": [
-      "https://www.blibli.com/friends-backend/wp-content/uploads/2024/03/B111519-Cover-hero-ml-scaled.jpg",
-      "https://i.redd.it/jjc4lq53vw911.jpg",
-      "https://fastcdn.hoyoverse.com/content-v2/plat/123439/c39dd0699f78411122c6c9797d57a592_8017120099261456551.jpeg",
-      "https://i.ytimg.com/vi/An6x1i3rS04/maxresdefault.jpg",
-      "https://thesun.my/binrepository/efootball2024-mainvisual-messi_3459361_20230912213309.jpg",
-      "https://4kwallpapers.com/images/wallpapers/dinosaur-game-3840x2160-11309.png"
-    ]
+      "Sports": [
+          "images/Sports/bultang_1.jpg",
+          "images/Sports/bultang_2.jpg",
+          "images/Sports/bultang_3.jpg",
+          "images/Sports/bultang_4.jpg",
+          "images/Sports/bultang_5.jpg",
+          "images/Sports/bultang_6.jpg",
+          "images/Sports/bultang_7.jpg"
+      ],
+      "Film": [
+          "https://boredanddangerousblog.wordpress.com/wp-content/uploads/2015/09/beautiful-mind.jpg",
+          "https://thumbor.prod.vidiocdn.com/_E3qsDq5_pi8I6yKh4mOOBMyySc=/1280x720/filters:quality(70)/vidio-web-prod-video/uploads/video/image/8341905/sinopsis-the-chronicles-of-narnia-the-lion-the-witch-and-the-wardrobe-2005-rekomendasi-film-fantasi-petualangan-amerika-b17bbe.jpg",
+          "https://bisnismuda.id/assets/content/2023040304414200000020230331125940000000Godfather.jpg",
+          "https://thecrazyandlazy.wordpress.com/wp-content/uploads/2017/03/goblin.png",
+          "https://cdn.k-ennews.com/news/photo/202501/6881_18399_3812.jpg",
+          "https://asianwiki.com/images/c/c8/Itaewon_Class-mp1.jpg",
+          "https://www.viu.com/ott/id/articles/wp-content/uploads/2023/07/nonton-streaming-download-fireworks-of-my-heart-sub-indo-viu-slide-banner.jpg",
+          "https://miro.medium.com/v2/resize:fit:1024/1*XSPebIkn0Z_QGrHsUldB-Q.jpeg",
+          "https://i.ebayimg.com/images/g/jxYAAOSwbgxmTB6Y/s-l1200.jpg",
+          "https://www.thenewshouse.com/wp-content/uploads/Untitled-design-4-1024x683.png",
+          "https://www.bubbleblabber.com/wp-content/uploads/2014/05/Naruto-Shippuden-Konoha-Wallpapers-HD.jpg",
+          "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/243/2024/08/09/uiktyu-1182121447.jpg"
+      ],
+      "Games": [
+          "https://www.blibli.com/friends-backend/wp-content/uploads/2024/03/B111519-Cover-hero-ml-scaled.jpg",
+          "https://i.redd.it/jjc4lq53vw911.jpg",
+          "https://fastcdn.hoyoverse.com/content-v2/plat/123439/c39dd0699f78411122c6c9797d57a592_8017120099261456551.jpeg",
+          "https://i.ytimg.com/vi/An6x1i3rS04/maxresdefault.jpg",
+          "https://thesun.my/binrepository/efootball2024-mainvisual-messi_3459361_20230912213309.jpg",
+          "https://4kwallpapers.com/images/wallpapers/dinosaur-game-3840x2160-11309.png"
+      ]
   };
 
   const hobbyCards = document.querySelectorAll('.hobby-card');
@@ -158,50 +158,66 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeButton = modal.querySelector('.hobby-photos-close');
   const titleElement = modal.querySelector('.hobby-title');
 
+  // Enable body scroll lock
+  function lockScroll() {
+      document.body.style.overflow = 'hidden';
+  }
+
+  // Disable body scroll lock
+  function unlockScroll() {
+      document.body.style.overflow = '';
+  }
+
   hobbyCards.forEach(card => {
-    card.addEventListener('click', () => {
-      const hobbyTitle = card.querySelector('h3').textContent.trim();
-      titleElement.textContent = hobbyTitle;
-      titleElement.style.color = "var(--primary-yellow)";
-      grid.innerHTML = '';
+      card.addEventListener('click', () => {
+          const hobbyTitle = card.querySelector('h3').textContent.trim();
+          titleElement.textContent = hobbyTitle;
+          grid.innerHTML = '';
 
-      const photos = hobbyPhotosMap[hobbyTitle];
-      if (photos && photos.length > 0) {
-        photos.forEach((photoUrl, index) => {
-          const img = document.createElement('img');
-          img.src = photoUrl;
-          img.alt = `${hobbyTitle} photo ${index + 1}`;
-          img.loading = "lazy";
-          img.style.opacity = '0';
-          img.style.transform = 'translateY(20px)';
-          grid.appendChild(img);
+          const photos = hobbyPhotosMap[hobbyTitle];
+          if (photos && photos.length > 0) {
+              photos.forEach((photoUrl, index) => {
+                  const img = document.createElement('img');
+                  img.src = photoUrl;
+                  img.alt = `${hobbyTitle} photo ${index + 1}`;
+                  img.loading = "lazy";
+                  img.style.opacity = '0';
+                  img.style.transform = 'translateY(20px)';
+                  grid.appendChild(img);
 
-          setTimeout(() => {
-            img.style.transition = 'all 0.3s ease';
-            img.style.opacity = '1';
-            img.style.transform = 'translateY(0)';
-          }, index * 100);
-        });
-      } else {
-        grid.innerHTML = '<p>No photos available for this hobby.</p>';
-      }
-      modal.classList.add('active');
-    });
+                  // Stagger the animation of images
+                  setTimeout(() => {
+                      img.style.transition = 'all 0.3s ease';
+                      img.style.opacity = '1';
+                      img.style.transform = 'translateY(0)';
+                  }, index * 100);
+              });
+          } else {
+              grid.innerHTML = '<p style="color: #fff;">No photos available for this hobby.</p>';
+          }
+          
+          modal.classList.add('active');
+          lockScroll();
+      });
   });
 
+  // Close modal events
   closeButton.addEventListener('click', () => {
-    modal.classList.remove('active');
+      modal.classList.remove('active');
+      unlockScroll();
   });
 
   modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.classList.remove('active');
-    }
+      if (e.target === modal) {
+          modal.classList.remove('active');
+          unlockScroll();
+      }
   });
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-      modal.classList.remove('active');
-    }
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+          modal.classList.remove('active');
+          unlockScroll();
+      }
   });
 });
