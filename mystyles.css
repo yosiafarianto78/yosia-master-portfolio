@@ -44,6 +44,7 @@
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(var(--primary-yellow-rgb), 0.1);
     z-index: 1000;
+    transition: all 0.3s ease;
   }
   
   .nav-container {
@@ -386,6 +387,9 @@
   
   /* Mobile Responsive Design */
   @media (max-width: 768px) {
+    .navbar.menu-active {
+        background: rgba(17, 17, 17, 0.98); /* Matches nav-content background */
+    }    
     .nav-content {
         position: fixed;
         top: var(--navbar-height);

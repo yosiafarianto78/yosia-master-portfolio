@@ -1,27 +1,49 @@
-/* NAVIGATION TOGGLE */
 function toggleMenu() {
   const navContent = document.querySelector('.nav-content');
   const hamburger = document.querySelector('.hamburger');
+  const navbar = document.querySelector('.navbar');
   
   navContent.classList.toggle('active');
   hamburger.classList.toggle('active');
+  navbar.classList.toggle('menu-active'); // Toggle the new menu-active class
+  
+  // Prevent body scroll when menu is open
+  document.body.style.overflow = navContent.classList.contains('active') ? 'hidden' : '';
 }
 
-// Add this new code to handle link clicks
-const navLinks = document.querySelectorAll('.nav-links a'); // Select all nav links
+// Update click outside handler to also remove menu-active class
+document.addEventListener('click', (e) => {
+  const navContent = document.querySelector('.nav-content');
+  const hamburger = document.querySelector('.hamburger');
+  const navbar = document.querySelector('.navbar');
+  
+  if (navContent.classList.contains('active') && 
+      !e.target.closest('.nav-content') && 
+      !e.target.closest('.hamburger')) {
+    navContent.classList.remove('active');
+    hamburger.classList.remove('active');
+    navbar.classList.remove('menu-active'); // Remove menu-active class
+    document.body.style.overflow = '';
+  }
+});
 
+// Update nav links click handler
+const navLinks = document.querySelectorAll('.nav-links a');
 navLinks.forEach(link => {
   link.addEventListener('click', () => {
     const navContent = document.querySelector('.nav-content');
     const hamburger = document.querySelector('.hamburger');
+    const navbar = document.querySelector('.navbar');
     
-    // Only close if the nav is currently open
     if (navContent.classList.contains('active')) {
       navContent.classList.remove('active');
       hamburger.classList.remove('active');
+      navbar.classList.remove('menu-active'); // Remove menu-active class
+      document.body.style.overflow = '';
     }
   });
 });
+
 /* MUSIC PLAYBACK */
 document.addEventListener('DOMContentLoaded', () => {
   const musicCheckbox = document.getElementById('musicCheckbox');
@@ -39,20 +61,20 @@ document.addEventListener('DOMContentLoaded', () => {
           }
       });
 
-      // Handle page visibility changes
-      document.addEventListener('visibilitychange', () => {
-          if (document.hidden) {
-              if (audio && !audio.paused) {
-                  audio.pause();
-                  sessionStorage.setItem('wasPlaying', 'true');
-              }
-          } else {
-              if (sessionStorage.getItem('wasPlaying') === 'true' && musicCheckbox.checked) {
-                  audio.play().catch(error => console.log("Autoplay blocked:", error));
-                  sessionStorage.removeItem('wasPlaying');
-              }
-          }
-      });
+      // // Handle page visibility changes
+      // document.addEventListener('visibilitychange', () => {
+      //     if (document.hidden) {
+      //         if (audio && !audio.paused) {
+      //             audio.pause();
+      //             sessionStorage.setItem('wasPlaying', 'true');
+      //         }
+      //     } else {
+      //         if (sessionStorage.getItem('wasPlaying') === 'true' && musicCheckbox.checked) {
+      //             audio.play().catch(error => console.log("Autoplay blocked:", error));
+      //             sessionStorage.removeItem('wasPlaying');
+      //         }
+      //     }
+      // });
   }
 });
 
