@@ -1,213 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Who Is Yosia</title>
-    <link rel="stylesheet" href="mystyles.css">
-    <script src="myjs.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Who Is Yosia</title>
+  <link rel="stylesheet" href="mystyles.css">
+  <script defer src="myjs.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
-
 <body>
-    <audio id="bg-music" loop>
+ 
+
+  <!-- Navigation -->
+  <nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <span class="logo-text">Yosia Herson Farianto</span>
+      <div class="logo-underline"></div>
+    </div>
+    
+    <div class="nav-content">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-item">Home</a></li>
+        <li><a href="#profile" class="nav-item">Profile</a></li>
+        <li><a href="#experience" class="nav-item">Experience</a></li>
+        <li><a href="#skills" class="nav-item">Tools</a></li>
+        <li><a href="#hobbies" class="nav-item">Hobbies</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
+      </ul>
+    
+
+      
+     <!-- Audio Element -->
+     <audio id="bg-music" loop>
         <source src="music/midnight-glow.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
     </audio>
 
-    <nav class="navbar">
-        <div class="logo">Yosia Herson Farianto</div>
-        <div class="music-toggle">
-            <label for="musicCheckbox">Voice ON</label>
-            <input type="checkbox" id="musicCheckbox">
-            
+    <!-- Toggle Switch -->
+    <div class="toggle">
+        <input type="checkbox" id="musicCheckbox">
+        <label for="musicCheckbox">
+            <div class="track"></div>
+            <div class="thumb"></div>
+        </label>
+        <div class="text">
+            <span class="on">ON</span>
+            <span class="off">OFF</span>
         </div>
         
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Tools</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-    </nav>
+    <div class="music-icon"></div> 
+    </div>
+    <i class='fas fa-headphones-alt' style='font-size:48px;color:red'></i>
+    </div>
 
-    <section id="home">
-        <div class="hero-content">
-            <h1>One of life's essential questions will finally be answered,</h1>
-            <br>
-            <h1 style="text-align: center;">"Who is Yosia?"</h1>
-        </div>
-    </section>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span>
+      <span></span>
 
-    <section id="profile" >
-        <h2 class="section-title">Who is Yosia?</h2>
-        <div class="profile-container">
-            <div class="profile-text">
-                <img src="images/profile_.jpg" alt="Yosia's Profile" class="profile-img">
-              
-                    <p>What drives someone to constantly seek better ways to solve problems and improve processes? For me, it’s a passion for innovation and a willingness to grow. I love working with new technologies and using IT to turn manual, repetitive tasks into efficient, automated solutions. Currently, I work on improving workflows and making every part of a process as effective as possible.
-                    </p>
-
-                    <br>
-                    
-                    <p>I graduated from Calvin Institute of Technology, where I not only gained a strong foundation in Computer Science but also studied Theology. This unique combination taught me to approach challenges with both technical expertise and a deeper sense of purpose. I believe in doing things with care and always embrace new challenges as opportunities to grow.
-                    </p>
-                    
-                    <br>
-                    
-                    <p>Coming from a small village in West Kalimantan called Sentebang, I learned the value of hard work, humility, and community. These principles guide me every day. The idea of "Ora et Labora" (Pray and Work) keeps me focused, while "Nil Sine Numine" (Nothing Without Divine Will) reminds me to stay humble and purposeful in everything I do.
-                    </p>
-                    
-                    <br>
-                    
-                    <p>I enjoy learning from every experience, value teamwork, and love connecting with people from different backgrounds. With a good sense of humor and strong communication skills, I build great relationships and create a positive work environment. Whether it’s refining processes or finding smarter ways to handle tasks, I’m always eager to contribute to meaningful progress.
-                    </p>
-
-                    <br>
-                    <p style="text-align: center;">"The busier we are, the more acutely we feel that we live, the more conscious we are of life."</p>
-                    <p style="text-align: center;">Immanuel Kant</p>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2 class="section-title">Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>Business Process Reengineering</h3>
-                <p>📍BCA Life | 2025 - Present</p>
-                <br>
-                <li>Automating workflows to boost efficiency</li>
-                <li>Simplifying complex processes for seamless operations</li>
-                <li>Recommending strategic improvements to optimize processes</li>
-            </div>
-            
-            <div class="timeline-item">
-                <h3>Data Science Remote Internship</h3>
-                <p>📍Oasis InfoByte | 2024 - 2025</p>
-                
-                <br>
-                <li>Developed machine learning models for prediction</li>
-                <li>Built a web application to showcase the models</li>
-            </div>
-
-            <div class="timeline-item">
-                <h3>Robotic Process Automation Internship</h3>
-                <p>📍BCA Life | 2023 - 2024</p>
-                <br>
-                <li>Streamlining repetitive tasks through Excel automation</li>
-                <li>Building RPA solutions to enhance operational efficiency</li>
-            </div>
-            <div class="timeline-item">
-                <h3>Student Employee Program</h3>
-                <p>📍Calvin Institute of Technology | 2020 - 2021</p>
-                <br>
-                <li>Delivering top-tier service at the university’s dining hall</li>
-            </div>
-        </div>
-        <br>
-        <br>
-    </section>
-
-
-    <section id="skills" class="skill-section">
-        <h2 class="section-title">Tools</h2>
-        <div class="skills-track">
-            <div class="skills-line" id="skills-container">
-        
-            </div>
-        </div>
-    </section>
-
-
-
-    <section id="hobbies">
-        <h2 class="section-title">Hobbies</h2>
-        <div class="hobbies-container">
-            <div class="hobby-card">
-                <h3 hidden style="text-align: center">Sports</h3>
-                <img src="images\Hobby\panda_badminton.jpg" alt="Sports" class="hobby-image">
-                <div class="hobby-info">
-                    <p>Enjoying sports activities to stay active and healthy.</p>
-                </div>
-            </div>
-
-            <div class="hobby-card">
-                <h3 hidden style="text-align: center;">Film</h3>
-                <img src="images\Hobby\panda_watching.jpg" alt="Watching" class="hobby-image">
-                <div class="hobby-info">
-                    <p>Watching movies, anime, drama to relax and explore different stories.</p>
-                </div>
-            </div>
-            
-            <div class="hobby-card">
-                <h3 hidden style="text-align: center;">Games</h3>
-                <img src="images\Hobby\panda_mobile.jpg" alt="Games" class="hobby-image">
-                <div class="hobby-info">
-                    <p>Playing video games for fun and strategy.</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="hobby-photos-modal" class="hobby-photos-modal">
-            <div class="hobby-photos-content">
-                <button class="hobby-photos-close">&times;</button>
-                <h2 class="hobby-title"></h2>
-                <div class="hobby-photos-grid"></div>
-            </div>
-        </div>
+      <span></span>
+    </button>
     
-    </section>
+  </div>
+</nav>
 
-    <section id="contact">
-        <h2 class="section-title">Contact Me</h2>
-        <div class="contact-container">    
-            <div class="contact-grid">
-                <a href="https://wa.me/087778315785" class="contact-card" target="_blank">
-                    <div class="contact-icon">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSi0SZhQmO5P8V2sHDkwXLSbWFS-hWrsGc5A&s" alt="Icon">
-                    </div>
-                    <div class="contact-info">
-                        <div class="label">WhatsApp</div>
-                        <div class="value">+62 *7*-****-5**5</div>
-                    </div>
-                </a>
-    
-                <a href="https://linkedin.com/in/yosiahf" class="contact-card" target="_blank">
-                    <div class="contact-icon">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQ0auHUZTUE9U9t8PEuacvgDFced9advyyw&s" alt="Icon">
-                        
-                    </div>
-                    <div class="contact-info">
-                        <div class="label">LinkedIn</div>
-                        <div class="value">Yosia Herson Farianto</div>
-                    </div>
-                </a>
-    
-                <a href="https://instagram.com/yosiaherson_" class="contact-card" target="_blank">
-                    <div class="contact-icon">
-                        <img src="https://freepngimg.com/thumb/instagram/118549-logo-instagram-free-hq-image-thumb.png" alt="Icon">   
-                    </div>
-                    <div class="contact-info">
-                        <div class="label">Instagram</div>
-                        <div class="value">@yosiaherson_</div>
-                    </div>
-                </a>
-                <a class="contact-card" target="_blank">
-                    <div class="contact-icon">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYqSRhOThO0bu2tz-vomtGMn_bKQl-COELjA&s" alt="Icon">
-                        
-                    </div>
-                    <div class="contact-info">
-                        <div class="label">Email</div>
-                        <div class="value">yosiafarianto7@gmail.com</div>
-                    </div>
-                </a>
+  <!-- Home Section -->
+  <section id="home" class="section home-section">
+    <div class="hero-content">
+      <h1>One of life's essential questions will finally be answered,</h1>
+      <h1 class="quote">"Who is Yosia?"</h1>
+    </div>
+  </section>
 
-            </div>
+  <!-- Profile Section -->
+  <section id="profile" class="section profile-section">
+    <h2 class="section-title">Who is Yosia?</h2>
+    <div class="profile-container">
+      <div class="profile-text">
+        <img src="images/profile_.jpg" alt="Yosia's Profile" class="profile-img">
+        <p>
+          What drives someone to constantly seek better ways to solve problems and improve processes? For me, it’s a passion for innovation and a willingness to grow. I love working with new technologies and using IT to turn manual, repetitive tasks into efficient, automated solutions. Currently, I work on improving workflows and making every part of a process as effective as possible.
+        </p>
+        <p>
+          I graduated from Calvin Institute of Technology, where I not only gained a strong foundation in Computer Science but also studied Theology. This unique combination taught me to approach challenges with both technical expertise and a deeper sense of purpose. I believe in doing things with care and always embrace new challenges as opportunities to grow.
+        </p>
+        <p>
+          Coming from a small village in West Kalimantan called Sentebang, I learned the value of hard work, humility, and community. These principles guide me every day. The idea of "Ora et Labora" (Pray and Work) keeps me focused, while "Nil Sine Numine" (Nothing Without Divine Will) reminds me to stay humble and purposeful in everything I do.
+        </p>
+        <p>
+          I enjoy learning from every experience, value teamwork, and love connecting with people from different backgrounds. With a good sense of humor and strong communication skills, I build great relationships and create a positive work environment. Whether it’s refining processes or finding smarter ways to handle tasks, I’m always eager to contribute to meaningful progress.
+        </p>
+        <p class="quote">
+          "The busier we are, the more acutely we feel that we live, the more conscious we are of life."<br>
+          — Immanuel Kant
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section">
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Business Process Reengineering</h3>
+          <div class="timeline-location">BCA Life, Jakarta</div>
+          <ul>
+            <li>Automating workflows to boost efficiency</li>
+            <li>Simplifying complex processes for seamless operations</li>
+            <li>Recommending strategic improvements to optimize processes</li>
+          </ul>
         </div>
-    </section>
+      </div>
+  
+      <!-- Timeline Item 2 -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Robotic Process Automation Internship</h3>
+          <div class="timeline-location">BCA Life, Jakarta</div>
+          <ul>
+            <li>Streamlining repetitive tasks through Excel automation</li>
+            <li>Building RPA solutions to enhance operational efficiency</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Timeline Item 3 -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Student Employee Program</h3>
+          <div class="timeline-location">Calvin Institute of Technology, Jakarta</div>
+          <ul>
+            <li>Delivering top-tier service at the university’s dining hall</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skill-section">
+    <h2 class="section-title">Tools</h2>
+    <div class="skills-track">
+      <div class="skills-line" id="skills-container">
+        <!-- Skill items will be injected here by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Hobbies Section -->
+  <section id="hobbies" class="section hobbies-section">
+    <h2 class="section-title">Hobbies</h2>
+    <div class="hobbies-container">
+      <div class="hobby-card">
+        <h3 hidden>Sports</h3>
+        <img src="images/Hobby/panda_badminton.jpg" alt="Sports" class="hobby-image">
+        <div class="hobby-info">
+          <p>Enjoying sports activities to stay active and healthy.</p>
+        </div>
+      </div>
+      <div class="hobby-card">
+        <h3 hidden>Film</h3>
+        <img src="images/Hobby/panda_watching.jpg" alt="Film" class="hobby-image">
+        <div class="hobby-info">
+          <p>Watching movies, anime, drama to relax and explore different stories.</p>
+        </div>
+      </div>
+      <div class="hobby-card">
+        <h3 hidden>Games</h3>
+        <img src="images/Hobby/panda_mobile.jpg" alt="Games" class="hobby-image">
+        <div class="hobby-info">
+          <p>Playing video games for fun and strategy.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Hobby Photos Modal -->
+    <div id="hobby-photos-modal" class="hobby-photos-modal">
+      <div class="hobby-photos-content">
+        <button class="hobby-photos-close">&times;</button>
+        <h2 class="hobby-title"></h2>
+        <div class="hobby-photos-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact-container">
+      <div class="contact-grid">
+        <a href="https://wa.me/087778315785" class="contact-card" target="_blank">
+          <div class="contact-icon">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSi0SZhQmO5P8V2sHDkwXLSbWFS-hWrsGc5A&s" alt="WhatsApp Icon">
+          </div>
+          <div class="contact-info">
+            <div class="label">WhatsApp</div>
+            <div class="value">+62 *7*-****-5**5</div>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/yosiahf" class="contact-card" target="_blank">
+          <div class="contact-icon">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQ0auHUZTUE9U9t8PEuacvgDFced9advyyw&s" alt="LinkedIn Icon">
+          </div>
+          <div class="contact-info">
+            <div class="label">LinkedIn</div>
+            <div class="value">Yosia Herson Farianto</div>
+          </div>
+        </a>
+        <a href="https://instagram.com/yosiaherson_" class="contact-card" target="_blank">
+          <div class="contact-icon">
+            <img src="https://freepngimg.com/thumb/instagram/118549-logo-instagram-free-hq-image-thumb.png" alt="Instagram Icon">
+          </div>
+          <div class="contact-info">
+            <div class="label">Instagram</div>
+            <div class="value">@yosiaherson_</div>
+          </div>
+        </a>
+        <a class="contact-card" target="_blank">
+          <div class="contact-icon">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYqSRhOThO0bu2tz-vomtGMn_bKQl-COELjA&s" alt="Email Icon">
+          </div>
+          <div class="contact-info">
+            <div class="label">Email</div>
+            <div class="value">yosiafarianto7@gmail.com</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
